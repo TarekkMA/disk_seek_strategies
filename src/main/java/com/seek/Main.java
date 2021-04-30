@@ -15,10 +15,12 @@ public class Main {
                 MIN_TRACK, MAX_TRACK
         );
         List<Integer> requestSequence = Arrays.asList(15, 4, 40, 11, 35, 7, 14);
+        //requestSequence = Arrays.asList(82, 170, 43, 140, 24, 16, 190);
 
         List<SeekStrategy> strategies = Arrays.asList(
                 new FCFS(),
-                new SSTF()
+                new SSTF(),
+                new SCAN()
         );
 
         for (SeekStrategy strategy : strategies) {
