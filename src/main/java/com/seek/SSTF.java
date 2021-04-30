@@ -5,7 +5,8 @@ import java.util.stream.Collectors;
 
 public class SSTF implements SeekStrategy {
     @Override
-    public List<Integer> order(List<Integer> sequence, int headPosition) {
+    public List<Integer> order(List<Integer> sequence, DiskConfig config) {
+        int headPosition = config.headPosition;
         sequence = new ArrayList<>(sequence);
         List<Integer> res = new ArrayList<>();
         Set<Integer> accessed = new HashSet<>();
